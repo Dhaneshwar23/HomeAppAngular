@@ -1,0 +1,31 @@
+<mat-toolbar class="toolBar">
+    <mat-icon class="sidenav-menu-icon" (click)="opened=!opened">
+        menu
+    </mat-icon>
+    <h3 class="mx-2 toolBarCss">
+        Home Tasks
+    </h3>
+
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" #sidenav="matSidenav">
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span (click)="goToHome()">Home</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>account_circle</mat-icon>
+            <span (click)="goToProfile()">Profile</span>
+        </button>
+        <button mat-button class="menu-button">
+            <mat-icon>exit_to_app</mat-icon>
+            <span (click)="onLogout()">Logout</span>
+        </button>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

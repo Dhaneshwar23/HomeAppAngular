@@ -1,0 +1,40 @@
+
+mat-sidenav {
+    width: 200px;
+    background:rgb(211, 208, 202);
+    color: white;
+    text-align: center;
+}
+
+.toolBarCss{
+    color: rgb(37, 15, 15);
+}
+
+.content{
+    font-size: 2rem;
+    color: lightgray;
+    margin:5px;
+}
+
+mat-sidenav-container{
+    height: calc(100vh - 65px);
+}
+
+.menu-button{
+    width: 100%;
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+    border:none;
+    background-color: transparent;
+    margin-top: 10px;
+
+    mat-icon{
+        margin-right: 8px;
+    }
+}
+.sidenav-menu-icon {
+    cursor: pointer;
+}

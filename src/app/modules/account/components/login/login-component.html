@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <mat-card class="homeCard">
+
+
+        <div>
+            <form [formGroup]="loginForm" class="text-center" (submit)="doLogin($event)">
+
+
+                <div class="form-row mb-4">
+                    <h1>
+                        Login
+                    </h1>
+
+                </div>
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label>Email</label>
+                    </div>
+
+                    <div class="col">
+                        <input type="email" formControlName="email" id="defaultLoginFormEmail" class="form-control mb-4"
+                            placeholder="E-mail">
+                    </div>
+                </div>
+                <div class="row">
+                    <div *ngIf="!email.valid && email.touched" class="input-error">
+                        <p>
+                            Please enter your Email Address
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label>Password</label>
+                    </div>
+
+                    <div class="col">
+                        <input type="password" formControlName="password" id="defaultLoginFormPassword"
+                            class="form-control mb-4" placeholder="Password">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div *ngIf="!password.valid && password.touched" class="input-error">
+                        <p>
+                            Please enter your Password
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-row mb-4">
+                    <div class="col">
+
+                        <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary">Login</button>
+                        &nbsp;
+                        &nbsp;
+                        <button type="button" (click)="onRegisterClick()" class="btn btn-secondary">Register</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </mat-card>
+
+
+</body>
+
+</html>
